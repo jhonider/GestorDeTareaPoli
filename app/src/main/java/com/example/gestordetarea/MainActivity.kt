@@ -18,10 +18,16 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val openButton: TextView = findViewById(R.id.registerButton)
-        openButton.setOnClickListener {
+        val registerButton: TextView = findViewById(R.id.registerButton)
+        registerButton.setOnClickListener {
             // Crea un Intent para abrir la nueva actividad
             val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+        val loginButton: TextView = findViewById(R.id.loginButton)
+        loginButton.setOnClickListener {
+            // Crea un Intent para abrir la nueva actividad
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }
