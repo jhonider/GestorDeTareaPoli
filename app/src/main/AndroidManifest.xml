@@ -22,7 +22,11 @@
         </activity>
         <activity android:name=".BuscardorWeb" />
         <activity android:name=".ListaVideos" />
-        <activity android:name=".ReproductorVideo"/>
+        <activity android:name=".ReproductorVideo"
+        />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
 

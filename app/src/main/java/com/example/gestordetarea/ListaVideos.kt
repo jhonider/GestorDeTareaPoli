@@ -6,6 +6,9 @@ import VideoDatabase
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 class ListaVideos : AppCompatActivity() {
     private lateinit var videoAdapter: VideoAdapter
     private lateinit var videoDatabase: VideoDatabase
+    private lateinit var videoList: List<Video>
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +27,18 @@ class ListaVideos : AppCompatActivity() {
 
         // Insertar videos en la base de datos (solo si no están ya insertados)
         insertInitialVideos()
+
+        // Configurar la barra de búsqueda
+        val searchBar = findViewById<EditText>(R.id.filterBar)
+        searchBar.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                filterVideos(s.toString())
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+        })
 
         val videoList = videoDatabase.getAllVideos()
 
@@ -55,6 +71,18 @@ class ListaVideos : AppCompatActivity() {
             }
         }
     }
+
+
+    // Filtrar los videos en función del texto ingresado
+    private fun filterVideos(query: String) {
+        val filteredList = videoList.filter {
+            it.title.contains(query, ignoreCase = true)
+        }
+        videoAdapter = VideoAdapter(filteredList) { video ->
+            val intent = Intent(this, ReproductorVideo::class.java)
+            intent.putExtra("videoUri", video.uri)
+            startActivity(intent)
+        }
+        findViewById<RecyclerView>(R.id.recyclerView).adapter
+    }
 }
-
-

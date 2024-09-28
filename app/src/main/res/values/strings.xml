@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Gestor de Tarea</string>
     <string name="search" />
+    <string name="taskmaster">TaskMaster</string>
 </resources>

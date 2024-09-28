@@ -3,49 +3,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:ignore="ExtraText">
 
     <!-- Menú hamburguesa -->
     <ImageView
         android:id="@+id/menuIcon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="20dp"
+        android:layout_height="19dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
+        android:contentDescription="Menu Icon"
+        android:src="@drawable/ic_menu"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="Menu Icon"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Título de la aplicación -->
-
-    <!-- Contenedor de barra de búsqueda -->
     <TextView
         android:id="@+id/appTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="138dp"
+        android:layout_height="40dp"
         android:layout_marginTop="16dp"
-        android:text="Task Master"
+        android:text="@string/taskmaster"
         android:textColor="@android:color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/grand_hotel"
         app:layout_constraintHorizontal_bias="0.378"
         app:layout_constraintStart_toEndOf="@id/menuIcon"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Contenedor de barra de búsqueda -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="384dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:background="#60E97D50"
+        android:padding="8dp"
+        android:text="Buscador Web"
+        android:textColor="#343F4B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appTitle"
+        tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:id="@+id/searchBarContainer"
         android:layout_width="378dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
-        android:padding="16dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appTitle">
+        app:layout_constraintTop_toBottomOf="@id/title">
 
         <!-- EditText y Botón en la misma fila -->
         <EditText
@@ -69,6 +84,7 @@
         android:id="@+id/webView"
         android:layout_width="407dp"
         android:layout_height="687dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/searchBarContainer" />
