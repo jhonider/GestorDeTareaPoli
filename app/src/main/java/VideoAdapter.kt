@@ -1,3 +1,7 @@
+import android.graphics.Bitmap
+import android.media.MediaMetadataRetriever
+import android.media.ThumbnailUtils
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -6,8 +10,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gestordetarea.R
 
-class VideoAdapter(private val videos: List<Video>, private val onVideoClick: (Video) -> Unit) :
+class VideoAdapter(private var videos: List<Video>, private val onVideoClick: (Video) -> Unit) :
     RecyclerView.Adapter<VideoAdapter.VideoViewHolder>() {
+
+    // Método para actualizar los datos
+    fun updateData(newList: List<Video>) {
+        videos = newList
+        notifyDataSetChanged()  // Notificar al RecyclerView que los datos han cambiado
+    }
+
 
     class VideoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val videoIcon: ImageView = view.findViewById(R.id.videoIcon)
@@ -24,8 +35,15 @@ class VideoAdapter(private val videos: List<Video>, private val onVideoClick: (V
         val video = videos[position]
         holder.videoTitle.text = video.title
 
-        // Aquí puedes configurar el ícono si cada video tiene uno personalizado
-        //holder.videoIcon.setImageResource(R.drawable.ic_video_placeholder)
+        val videoThumbnail: Bitmap? = ThumbnailUtils.createVideoThumbnail(
+            video.uri,  // Ruta del video
+            MediaStore.Video.Thumbnails.MINI_KIND  // Especificamos que es un video
+        )
+
+        // Asignar la miniatura al ImageView
+        videoThumbnail?.let {
+            holder.videoIcon.setImageBitmap(it)
+        } ?: holder.videoIcon.setImageResource(R.drawable.ic_video)
 
         // Configura el icono de reproducción
         holder.playIcon.setOnClickListener {

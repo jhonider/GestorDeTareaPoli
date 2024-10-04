@@ -20,10 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BuscardorWeb" />
+        <activity android:name=".BuscardorWeb"/>
         <activity android:name=".ListaVideos" />
         <activity android:name=".ReproductorVideo"
-        />
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
