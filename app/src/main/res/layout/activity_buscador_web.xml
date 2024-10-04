@@ -7,32 +7,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:ignore="ExtraText">
 
-    <!-- Menú hamburguesa -->
-    <ImageView
-        android:id="@+id/menuIcon"
-        android:layout_width="20dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        android:contentDescription="Menu Icon"
-        android:src="@drawable/ic_menu"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Título de la aplicación -->
-    <TextView
-        android:id="@+id/appTitle"
-        android:layout_width="138dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/taskmaster"
-        android:textColor="@android:color/black"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:fontFamily="@font/grand_hotel"
-        app:layout_constraintHorizontal_bias="0.378"
-        app:layout_constraintStart_toEndOf="@id/menuIcon"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- Header -->
+    <com.example.gestordetarea.CustomHeader
+        android:id="@+id/customHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
 
     <!-- Contenedor de barra de búsqueda -->
 
@@ -47,7 +27,7 @@
         android:text="Buscador Web"
         android:textColor="#343F4B"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appTitle"
+        app:layout_constraintTop_toBottomOf="@id/customHeader"
         tools:ignore="MissingConstraints" />
 
     <LinearLayout
