@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme for Night mode -->
+    <style name="Theme.GestorDeTarea" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Color Primary: Color principal que se usa en la barra de acción, botones, etc. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- Color Primary Dark: Color más oscuro utilizado, generalmente en la barra de estado -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- Color Accent: Color que se usa para resaltar elementos, como botones flotantes -->
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Personalización de la fuente -->
+        <item name="android:fontFamily">@font/roboto</item>
+
+        <!-- Personalización del botón flotante -->
+        <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton</item>
+
+        <!-- Color de fondo oscuro -->
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+</resources>

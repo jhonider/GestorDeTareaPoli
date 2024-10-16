@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@color/cardBackground1">
+
+    <RelativeLayout
+        android:id="@+id/layoutTablero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/tableroColor1"> <!-- Este es el contenedor donde se aplicará el color -->
+
+        <TextView
+            android:id="@+id/tvTituloTablero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tablero 1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tvDescripcionTablero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTituloTablero"
+            android:text="Descripción del Tablero"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/black"
+            tools:ignore="HardcodedText" />
+
+        <!-- Botón Tareas -->
+        <Button
+            android:id="@+id/btnTareas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:text="Tareas"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/buttonTextColor"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

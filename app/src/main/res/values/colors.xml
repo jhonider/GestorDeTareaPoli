@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF9800</color> <!-- Naranja -->
+    <color name="colorPrimaryDark">#F57C00</color> <!-- Naranja más oscuro -->
+    <color name="colorAccent">#FF5722</color> <!-- Otro tono de naranja -->
+    <color name="backgroundColor">#FFFFFF</color> <!-- Blanco -->
+    <color name="buttonTextColor">#FFFFFF</color> <!-- Texto blanco para botones -->
+    <color name="searchBackground">#FFE0B2</color> <!-- Fondo de búsqueda claro -->
+    <color name="cardBackground1">#FFCCBC</color> <!-- Color de fondo del CardView -->
+    <color name="tableroColor1">#FFF8E1</color> <!-- Color adicional para los tableros -->
+</resources>

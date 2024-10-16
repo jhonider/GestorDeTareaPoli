@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvTituloTablero" type="id" />
+    <item name="tvDescripcionTablero" type="id" />
+    <item name="toolbar" type="id" />
+    <item name="etEstiloTablero" type="id" />
+    <item name="btnTareas" type="id" />
+    <item name="recyclerViewTareas" type="id" />
+    <item name="fabAgregarTarea" type="id" />
+    <item name="btnAceptar" type="id" />
+    <item name="btnFechaInicio" type="id" />
+    <item name="btnFechaFin" type="id" />
+    <item name="menu_hambuesa" type="id" />
+    <item name="btnCancelarFin" type="id" />
+    <item name="textView" type="id" />
+    <item name="btnCancelarInicio" type="id" />
+    <item name="fabNuevaTarea" type="id" />
+</resources>
