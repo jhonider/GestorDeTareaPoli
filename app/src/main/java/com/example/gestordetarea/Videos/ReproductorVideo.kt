@@ -1,4 +1,4 @@
-package com.example.gestordetarea
+package com.example.gestordetarea.Videos
 
 import android.annotation.SuppressLint
 import android.content.pm.ActivityInfo
@@ -6,6 +6,8 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.MediaController
 import androidx.appcompat.app.AppCompatActivity
+import com.example.gestordetarea.R
+import com.example.gestordetarea.Utils.FullScreenVideoView
 
 class ReproductorVideo : AppCompatActivity() {
     @SuppressLint("WrongViewCast")

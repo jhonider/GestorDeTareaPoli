@@ -1,5 +1,6 @@
+package com.example.gestordetarea.Videos
+
 import android.graphics.Bitmap
-import android.media.MediaMetadataRetriever
 import android.media.ThumbnailUtils
 import android.provider.MediaStore
 import android.view.LayoutInflater

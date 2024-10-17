@@ -1,4 +1,4 @@
-package com.example.gestordetarea
+package com.example.gestordetarea.Utils
 
 import android.content.Context
 import android.util.AttributeSet
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.gestordetarea.R
 
 class CustomHeader @JvmOverloads constructor(
     context: Context,

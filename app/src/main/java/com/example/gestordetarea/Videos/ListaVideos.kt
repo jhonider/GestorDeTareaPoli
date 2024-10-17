@@ -1,8 +1,5 @@
-package com.example.gestordetarea
+package com.example.gestordetarea.Videos
 
-import Video
-import VideoAdapter
-import VideoDatabase
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
@@ -12,6 +9,7 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.gestordetarea.R
 
 class ListaVideos : AppCompatActivity() {
     private lateinit var videoAdapter: VideoAdapter
@@ -51,9 +49,6 @@ class ListaVideos : AppCompatActivity() {
             startActivity(intent)
         }
         recyclerView.adapter = videoAdapter
-
-        // Asignar el adaptador al RecyclerView
-        //findViewById<RecyclerView>(R.id.recyclerView).adapter = videoAdapter
     }
 
     // Método para insertar videos iniciales en la base de datos

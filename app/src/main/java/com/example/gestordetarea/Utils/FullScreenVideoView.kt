@@ -1,4 +1,4 @@
-package com.example.gestordetarea
+package com.example.gestordetarea.Utils
 
 import android.content.Context
 import android.util.AttributeSet
