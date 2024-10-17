@@ -1,4 +1,4 @@
-package com.example.gestordetarea
+package com.example.gestordetarea.Tareas
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CalendarView
 import androidx.fragment.app.DialogFragment
+import com.example.gestordetarea.R
 import java.util.Calendar
 
 class CustomCalendarDialogFragment : DialogFragment() {

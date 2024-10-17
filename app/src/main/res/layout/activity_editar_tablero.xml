@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditarTableroActivity">
+    tools:context=".Tablero.EditarTableroActivity">
 
     <!-- Campo de texto para el nombre del tablero -->
     <EditText

@@ -1,122 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Contenedor principal con el DrawerLayout -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <!-- Toolbar que contiene el menú hamburguesa -->
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <!-- Título Principal con Fuente Grand Hotel -->
-        <TextView
-            android:id="@+id/tvTitulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Task Master"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/grandhotel_regular"
-            android:textColor="@color/colorPrimary"
-            android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@id/toolbar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="24dp"
-            tools:ignore="HardcodedText" />
-
-        <!-- Barra de búsqueda -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/searchCard"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:cardElevation="4dp"
-            app:layout_constraintTop_toBottomOf="@id/tvTitulo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="16dp"
-            android:background="@color/searchBackground">
-
-            <EditText
-                android:id="@+id/etSearch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Buscar"
-                android:drawableStart="@drawable/ic_search"
-                android:padding="12dp"
-                android:background="@android:color/transparent"
-                android:textColor="@android:color/black"
-                tools:ignore="Autofill,HardcodedText,TextFields" />
-        </androidx.cardview.widget.CardView>
-
-        <!-- RecyclerView para la lista de tableros -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvListaTableros"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@id/searchCard"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="16dp"/>
-
-        <!-- LinearLayout para texto "Nuevo Tablero" encima del FloatingActionButton -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp">
-
-            <!-- Texto "Nuevo Tablero" -->
-            <TextView
-                android:id="@+id/tvNuevoTablero"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nuevo Tablero"
-                android:textSize="16sp"
-                android:textColor="@color/colorPrimary"
-                android:layout_marginBottom="8dp"
-                tools:ignore="HardcodedText" />
-
-            <!-- Botón flotante para agregar un nuevo tablero -->
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabAgregarTablero"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_add"
-                app:tint="@color/buttonTextColor"
-                android:layout_margin="16dp"
-                app:backgroundTint="@color/colorAccent"
-                tools:ignore="ContentDescription" />
-        </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- Menú hamburguesa estático -->
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_view"
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:menu="@menu/menu_navigation"/>
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.401" />
 
-</androidx.drawerlayout.widget.DrawerLayout>
+    <Button
+        android:id="@+id/button_tablero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tablero"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="318dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501" />
+</androidx.constraintlayout.widget.ConstraintLayout>
