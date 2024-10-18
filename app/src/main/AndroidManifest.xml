@@ -27,28 +27,24 @@
 
         <!-- Declaración de NuevaTareaActivity con ajuste del teclado -->
         <activity
-            android:name=".Tareas.NuevaTareaActivity"
+            android:name=".NuevaTareaActivity"
             android:windowSoftInputMode="adjustResize"
             android:exported="false" />
 
         <!-- Declaración de NuevoTableroActivity con ajuste del teclado -->
         <activity
-            android:name=".Tablero.NuevoTableroActivity"
+            android:name=".NuevoTableroActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <!-- Declaración de EditarTableroActivity -->
         <activity
-            android:name=".Tablero.EditarTableroActivity"
+            android:name=".EditarTableroActivity"
             android:exported="false" />
 
         <!-- Declaración de ListaTareasActivity -->
         <activity
-            android:name=".Tareas.ListaTareasActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".Tablero.TableroList"
+            android:name=".ListaTareasActivity"
             android:exported="false" />
 
         <activity android:name=".Buscador.BuscardorWeb"/>
