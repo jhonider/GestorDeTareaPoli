@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListaTablerosActivity">
+    tools:context=".Tablero.ListaTablerosActivity">
 
     <!-- Botón para agregar un nuevo tablero -->
     <Button

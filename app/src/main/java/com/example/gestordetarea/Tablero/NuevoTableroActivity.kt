@@ -1,4 +1,4 @@
-package com.example.gestordetarea
+package com.example.gestordetarea.Tablero
 
 import android.app.Activity
 import android.app.AlertDialog
@@ -12,6 +12,7 @@ import android.widget.Toast
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.gestordetarea.R
 
 class NuevoTableroActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.example.gestordetarea;
+package com.example.gestordetarea.Tareas;
 
 import android.app.Activity;
 

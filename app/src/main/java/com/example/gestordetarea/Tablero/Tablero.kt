@@ -1,4 +1,4 @@
-package com.example.gestordetarea
+package com.example.gestordetarea.Tablero
 
 data class Tablero(
     val nombre: String,

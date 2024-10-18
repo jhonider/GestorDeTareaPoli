@@ -1,4 +1,4 @@
-package com.example.gestordetarea
+package com.example.gestordetarea.Tablero
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -14,6 +14,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.gestordetarea.Tareas.ListaTareasActivity
+import com.example.gestordetarea.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ListaTablerosActivity : AppCompatActivity(),

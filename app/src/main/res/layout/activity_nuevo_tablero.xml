@@ -5,60 +5,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NuevoTableroActivity">
+    tools:context=".Tablero.NuevoTableroActivity">
 
-    <!-- Título "Task Master" centrado -->
-    <TextView
-        android:id="@+id/tvTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Task Master"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/grandhotel_regular"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"
-        tools:ignore="HardcodedText" />
-
-    <!-- Barra superior con menú hamburguesa y texto "Nuevo Tablero" -->
-    <LinearLayout
-        android:id="@+id/headerLayout"
+    <!-- Header -->
+    <com.example.gestordetarea.Utils.CustomHeader
+        android:id="@+id/customHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:padding="16dp"
-        android:background="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="384dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="4dp"
+        android:background="#60E97D50"
+        android:padding="8dp"
+        android:text="Nuevo Tablero"
+        android:textColor="#343F4B"
+        tools:ignore="MissingConstraints"
+        android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/customHeader"/>
 
-        <!-- Menú hamburguesa -->
-        <ImageButton
-            android:id="@+id/menu_hamburguesa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_menu"
-            android:contentDescription="Menú"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:tint="@android:color/white"
-            tools:ignore="HardcodedText,UseAppTint" />
-
-        <!-- Texto "Nuevo Tablero" -->
-        <TextView
-            android:id="@+id/tvNuevoTablero"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nuevo Tablero"
-            android:textSize="18sp"
-            android:textColor="@android:color/white"
-            android:layout_marginStart="16dp"
-            android:fontFamily="sans-serif-medium"
-            tools:ignore="HardcodedText" />
-    </LinearLayout>
 
     <!-- Campo de texto para el nombre del tablero -->
     <EditText
@@ -66,7 +35,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Nombre Tablero"
-        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp"

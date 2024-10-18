@@ -5,63 +5,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NuevaTareaActivity"
+    tools:context=".Tareas.NuevaTareaActivity"
     tools:ignore="ExtraText">
 
-    <!-- Botón de menú hamburguesa -->
-    <ImageButton
-        android:id="@+id/menu_hamburguesa"
-        android:layout_width="wrap_content"
+    <!-- Header -->
+    <com.example.gestordetarea.Utils.CustomHeader
+        android:id="@+id/customHeader"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_menu"
-        android:contentDescription="Menú"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="16dp"
-        android:tint="@android:color/black"
-        tools:ignore="HardcodedText,UseAppTint" />
+        tools:ignore="MissingConstraints" />
 
-    <!-- Título de la página -->
     <TextView
-        android:id="@+id/tvTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Task Master"
-        android:textColor="@color/colorPrimary"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/menu_hamburguesa"
-        tools:ignore="HardcodedText,UnknownId" />
-
-    <!-- Título de la nueva tarea -->
-    <TextView
-        android:id="@+id/tvTituloNuevaTarea"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:layout_width="384dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="4dp"
+        android:background="#60E97D50"
+        android:padding="8dp"
+        android:text="Tableros"
+        android:textColor="#343F4B"
+        tools:ignore="MissingConstraints"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:shadowColor="@android:color/holo_orange_light"
-        android:shadowDx="0"
-        android:shadowDy="1"
-        android:shadowRadius="3"
-        android:text="Nueva Tarea"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintTop_toBottomOf="@id/customHeader"/>
 
     <EditText
         android:id="@+id/etNombreTarea"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Nombre Tarea"
-        app:layout_constraintTop_toBottomOf="@id/tvTituloNuevaTarea"
+        app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp"

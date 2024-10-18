@@ -1,10 +1,11 @@
-package com.example.gestordetarea
+package com.example.gestordetarea.Tareas
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.gestordetarea.R
 
 class TareaAdapter(private val listaTareas: MutableList<Tarea>) : RecyclerView.Adapter<TareaAdapter.TareaViewHolder>() {
 

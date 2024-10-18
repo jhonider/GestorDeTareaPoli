@@ -1,4 +1,4 @@
-package com.example.gestordetarea
+package com.example.gestordetarea.Tareas
 
 data class Tarea(
     var nombre: String,
